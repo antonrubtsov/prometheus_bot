@@ -576,7 +576,7 @@ func POST_Handling(c *gin.Context) {
 	}
 	for _, subString := range SplitString(msgtext, cfg.SplitMessageBytes) {
 		msg := tgbotapi.NewMessage(chatid, subString)
-		msg.ParseMode = tgbotapi.ModeHTML
+		msg.ParseMode = tgbotapi.ModeMarkdown
 
 		// Print in Log result message
 		log.Println("+---------------  F I N A L   M E S S A G E  ---------------+")
